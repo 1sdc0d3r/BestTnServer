@@ -1,0 +1,289 @@
+@import "./breakpoints.scss";
+html {
+  background-color: black;
+  color: white;
+  font-size: 1.1em;
+
+  body {
+    margin: 0;
+  }
+}
+nav {
+  .banner {
+    width: 100%;
+  }
+  .btns {
+    padding: 0.5em 0;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.25em;
+    }
+  }
+}
+.index {
+  .welcome {
+    background-image: url(./images/trees.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 1.25em;
+    font-weight: 600;
+    line-height: 1.65em;
+    padding: 1em 2em;
+    h2 {
+      font-size: 1.95em;
+    }
+  }
+  .services-coverage {
+    font-weight: 500;
+    padding: 0 1em;
+
+    h2 {
+      text-align: center;
+      font-size: 1.72em;
+    }
+    p {
+      margin: 0 1em;
+      margin-bottom: 3em;
+    }
+    .services {
+      display: flex;
+      margin-bottom: 2em;
+      @include breakpoint(xxs, xs, s) {
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+      }
+      h4 {
+        text-decoration: underline;
+        font-size: 1.2em;
+      }
+      div {
+        width: 30%;
+        margin: 0 auto;
+        text-align: center;
+        @include breakpoint(xxs, xs, s) {
+          width: 100%;
+          margin-bottom: 3em;
+        }
+        img {
+          width: 8em;
+          height: 8em;
+          margin-right: 0;
+        }
+        ul {
+          li {
+            text-align: left;
+            line-height: 1.25em;
+          }
+        }
+      }
+    }
+  }
+  .affiliations {
+    background-color: lawngreen;
+    padding: 1em 1em 3em;
+    text-align: center;
+    color: blue;
+    h3 {
+      text-decoration: underline;
+      font-size: 1.35em;
+      margin-top: 0;
+    }
+    .row {
+      display: flex;
+      justify-content: space-around;
+      @include breakpoint(xxs, xs, s) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      div {
+        width: 33%;
+        @include breakpoint(xxs, xs, s) {
+          width: 100%;
+          margin: 1em auto;
+        }
+
+        img {
+          height: 5em;
+        }
+        a {
+          width: 10em;
+          margin: 0.35em auto;
+          display: block;
+        }
+      }
+    }
+  }
+  .blog-posts {
+    display: flex;
+    justify-content: space-around;
+    @include breakpoint(xxs, xs, s) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .post {
+      background-image: url(./images/trees.png);
+      text-align: center;
+      padding: 1em;
+      height: 20em;
+      width: 20em;
+      @include breakpoint(xxs, xs, s) {
+        margin-top: 2em;
+      }
+      p {
+        font-size: 0.65em;
+      }
+      h5 {
+        margin-top: 7em;
+        font-size: 1.25em;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.services-body {
+  font-size: 1.1em;
+  margin: auto 2em;
+  h1 {
+    color: orange;
+    text-align: center;
+    font-size: 3em;
+  }
+  h3 {
+    text-decoration: underline;
+    margin-bottom: 0;
+  }
+  img {
+    height: 10em;
+    width: 10em;
+    border-radius: 50%;
+    margin-right: 3em;
+    margin-top: 3em;
+  }
+  p {
+    line-height: 1.5em;
+    // margin-left: 3em;
+  }
+  button {
+    background-color: rgb(39, 193, 39);
+    color: white;
+    border: none;
+    border-radius: 2em;
+    font-size: 1.35em;
+    padding: 0.25em 0.85em;
+    width: 12em;
+  }
+  .sub-header {
+    text-align: center;
+    font-size: 3em;
+    @include breakpoint(xxs, xs, s, m) {
+      font-size: 2.65em;
+    }
+  }
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    h3 {
+      color: rgb(39, 193, 39);
+      font-size: 2.2em;
+      align-self: center;
+    }
+    .right-text {
+      display: flex;
+      width: 80%;
+      margin: auto;
+      @include breakpoint(xxs, xs, s, m) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    button {
+      margin-right: 10%;
+      @include breakpoint(xxs, xs, s, m) {
+        margin: auto;
+      }
+    }
+  }
+  .row2 {
+    display: flex;
+    margin: auto;
+    width: 80%;
+    margin-top: 3em;
+    @include breakpoint(xxs, xs, s, m) {
+      flex-direction: column;
+      align-items: center;
+    }
+    .right-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      p {
+        margin-bottom: 0;
+      }
+      button {
+        margin-top: 1em;
+        align-self: flex-end;
+        margin-right: 0;
+        @include breakpoint(xxs, xs, s, m) {
+          margin: 1em auto 0;
+        }
+      }
+    }
+  }
+  .wide-p {
+    text-align: center;
+    width: 80%;
+    margin: 1em auto;
+    @include breakpoint(xxs, xs, s, m) {
+      width: 100%;
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  .subscribe {
+    display: flex;
+    flex-direction: column;
+    width: 15em;
+    margin: auto;
+    input {
+      background-color: black;
+      border: 2px solid white;
+      margin-bottom: 0.25em;
+      text-align: center;
+      height: 1.35em;
+      color: white;
+      //   background-color: lawngreen;
+    }
+    button {
+      background-color: lawngreen;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 0.95em;
+    }
+  }
+  .social-media {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    margin: auto;
+    @include breakpoint(xxs, xs, s) {
+      // width: 80%;
+      margin: 0.5em auto;
+    }
+
+    a {
+      color: white;
+    }
+  }
+}
